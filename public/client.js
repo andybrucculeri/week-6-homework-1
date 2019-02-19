@@ -11,8 +11,7 @@ $(function() {
     
     // Display the track name
     var trackName = $(
-      // '<h3><a href="' + data.external_urls.spotify + '" target="blank">' + data.name + '</a></h3>'
-      `<h3><a href="${data.external_urls.spotify}">${data.name}</a></h3>`
+       '<h3><a href="' + data.external_urls.spotify + '" target="blank">' + data.name + '</a></h3>'
     );
     trackName.appendTo('#search-track-container');
     
@@ -28,11 +27,11 @@ $(function() {
     document.getElementById('search-track-container').append(h5);
     
     // Display the album art
-    var img = $('<img/>');
+    var img = document.createElement('<img/>');
     img.attr('src', data.album.images[0].url);
     img.appendTo('#search-track-container');
   });
-  //  fetch('/search-track').then(resp => resp.json()).then((data) => {
+  
   fetch('/category-playlists').then(resp => resp.json()).then((data) => {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
     console.group('%cResponse from /category-playlists', 'color: #F037A5; font-size: large');
