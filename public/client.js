@@ -32,8 +32,8 @@ $(function() {
     img.attr('src', data.album.images[0].url);
     img.appendTo('#search-track-container');
   });
-  
-  $.get('/category-playlists', function(data) {
+  //  fetch('/search-track').then(resp => resp.json()).then((data) => {
+  fetch('/category-playlists').then(resp => resp.json()).then((data) => {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
     console.group('%cResponse from /category-playlists', 'color: #F037A5; font-size: large');
     console.log(data);
