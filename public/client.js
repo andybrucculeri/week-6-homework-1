@@ -41,9 +41,9 @@ $(function() {
     // Display the covers of the playlists
     data
       .forEach((c) => {
-      $('#category-playlists-container').append(`<br><h1>${c.name}</h1><br>`)
+      document.getElementById('#category-playlists-container').append(`<br><h1>' + c.name + '</h1><br>`)
       c.data.playlists.items.map(function(playlist, i) {
-      var img = $('<img class="cover-image"/>');
+      var img = document.createElement('<img class="cover-image"/>');
       img.attr('src', playlist.images[0].url);
       img.appendTo('#category-playlists-container');
     });
