@@ -10,8 +10,12 @@
     console.groupEnd();
     
     // Display the track name
-    var trackName = $('<h3><a href="' + data.external_urls.spotify + '" target="blank">' + data.name + '</a></h3>');
-    trackName.appendTo('#search-track-container');
+    //var trackName = $('<h3><a href="' + data.external_urls.spotify + '" target="blank">' + data.name + '</a></h3>');
+    //trackName.appendTo('#search-track-container');
+    var h3 = document.createElement('h3');
+    var a = document.createElement('a');
+    h3.appendChild(a);
+    
     
     // Display the artist name
     var artists = '';
