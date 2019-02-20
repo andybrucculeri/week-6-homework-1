@@ -47,10 +47,12 @@ $(function() {
      // document.getElementById('category-playlists-container').appendChild(br);
 
       c.data.playlists.items.map(function(playlist, i) {
-        console.log("looping");
-      var img = document.createElement('<img class="cover-image"/>');
-      img.setAttribute('src', playlist.images[0].url);
-      document.getElementById('category-playlists-container').append(img);
+        var img = document.createElement('img');
+        img.setAttribute('class', 'cover-image');
+        img.setAttribute('src', playlist.images[0].url);
+      //var img = document.createElement('<img class="cover-image"/>');
+      // img.setAttribute('src', playlist.images[0].url);
+      document.getElementById('category-playlists-container').appendChild(img);
       //img.appendTo('#category-playlists-container');
     });
     })
