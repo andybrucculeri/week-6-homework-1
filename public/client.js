@@ -40,16 +40,14 @@ $(function() {
     console.log(data);
     console.groupEnd();
     
-    //"<br>" + "<h1>" + c.name + "</h1>" + "<br>")
-    
     // Display the covers of the playlists
     data
       .forEach(function(c) {
       document.getElementById('category-playlists-container').innerHTML = "<br>" + "<h1>" + c.name + "</h1>" + "<br>" ;
      // document.getElementById('category-playlists-container').appendChild(br);
-      //br.appendChild(h1);
-      //h1.innerHTML = c.name;
+
       c.data.playlists.items.map(function(playlist, i) {
+        console.log("looping");
       var img = document.createElement('<img class="cover-image"/>');
       img.setAttribute('src', playlist.images[0].url);
       document.getElementById('category-playlists-container').append(img);
