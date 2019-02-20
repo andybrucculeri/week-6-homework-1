@@ -47,9 +47,10 @@ $(function() {
       .forEach(function(c) {
       var br = document.createElement('br');
       var h1 = document.createElement('h1');
-      document.getElementById('category-playlists-container').appendChild(br);
-      br.appendChild(h1);
-      h1.innerHTML = c.name;
+      document.getElementById('category-playlists-container').innerHTML("<br>" + "<h1>" + c.name + "</h1>" + "<br>");
+     // document.getElementById('category-playlists-container').appendChild(br);
+      //br.appendChild(h1);
+      //h1.innerHTML = c.name;
       c.data.playlists.items.map(function(playlist, i) {
       var img = document.createElement('<img class="cover-image"/>');
       img.setAttribute('src', playlist.images[0].url);
