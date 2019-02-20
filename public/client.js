@@ -27,9 +27,11 @@ $(function() {
     document.getElementById('search-track-container').append(h5);
     
     // Display the album art
-    var img = document.createElement('<img/>');
-    img.attr('src', data.album.images[0].url);
-    img.appendTo('#search-track-container');
+    var img = document.createElement('img');
+    img.innerText = 'src= " ' + data.album.images[0].url + ' " ';
+    document.getElementById('search-track-container').append(img);
+    //img.attr('src', data.album.images[0].url);
+    //img.appendTo('#search-track-container');
   });
   
   fetch('/category-playlists').then(resp => resp.json()).then((data) => {
