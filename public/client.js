@@ -47,7 +47,7 @@ $(function() {
       .forEach(function(c) {
       var br = document.createElement('br');
       var h1 = document.createElement('h1');
-      document.getElementById('category-playlists-container').innerHTML("<br>" + "<h1>" + c.name + "</h1>" + "<br>");
+      document.getElementById('category-playlists-container').innerHTML = "<br>" + "<h1>" + c.name + "</h1>" + "<br>" ;
      // document.getElementById('category-playlists-container').appendChild(br);
       //br.appendChild(h1);
       //h1.innerHTML = c.name;
