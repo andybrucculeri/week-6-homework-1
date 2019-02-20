@@ -28,7 +28,7 @@ $(function() {
     
     // Display the album art
     var img = document.createElement('img');
-    img.innerText = 'src= " ' + data.album.images[0].url + ' " ';
+    img.setAttribute('src', data.album.images[0].url);
     document.getElementById('search-track-container').append(img);
     //img.attr('src', data.album.images[0].url);
     //img.appendTo('#search-track-container');
@@ -46,8 +46,9 @@ $(function() {
       document.getElementById('#category-playlists-container').append(`<br><h1>' + c.name + '</h1><br>`)
       c.data.playlists.items.map(function(playlist, i) {
       var img = document.createElement('<img class="cover-image"/>');
-      img.attr('src', playlist.images[0].url);
-      img.appendTo('#category-playlists-container');
+      img.setAttribute('src', playlist.images[0].url);
+      document.getElementById('category-playlists-container').append(img);
+      //img.appendTo('#category-playlists-container');
     });
     })
   });
