@@ -15,7 +15,9 @@
     var h3 = document.createElement('h3');
     var a = document.createElement('a');
     h3.appendChild(a);
-    
+    a.setAttribute('href', data.external_urls.spotify);
+    a.innerText = data.name;
+    document.getElementById('search-track-container').appendChild(h3);
     
     // Display the artist name
     var artists = '';
